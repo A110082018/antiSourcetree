@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -26,8 +27,21 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         move_bg();
+        esc_to_close();
     }
 
+    private void esc_to_close()
+    {
+        //esc = close
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
+    }
     private void move_bg()
     {
         //bg_pic
@@ -68,5 +82,31 @@ public class MainMenu : MonoBehaviour
             bg_cloud4.transform.position = new Vector3(5,-1,-7);
         }
         bg_cloud4.transform.Translate(-bg_speed1 * Time.deltaTime, 0, 0);
+    }
+
+    //Button Start
+    public void ButtonStart()
+    {
+        SceneManager.LoadScene(2);
+    }
+    //Button Settings
+    public void ButtonSettings()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    //Button Exit
+    public void ButtonExit()
+    {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+    }
+    //Button Back
+    public void ButtonBack()
+    {
+        SceneManager.LoadScene(0);
     }
 }
