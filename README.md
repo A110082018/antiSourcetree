@@ -8,7 +8,7 @@
 Hope You Enjoy :D
 
 # Main Menu
-1. Button Settings 
+1. Button Settings
 調整了horvered color（這東西在unity是叫什麼來著）
 讓底色在normal狀態下不顯示
 
@@ -38,6 +38,7 @@ Exit的名字為Escape（逃避）
 
 # Games
 開始做作業的第一步：整理程式
+
 對，只有一天可以做作業但是毅然決然地決定先把程式碼整理得乾乾淨淨，可能是某種潔癖吧
 也可能是在前幾次作業中，厭倦了四處找程式碼的生活，倒不如整理得乾乾淨淨我後續維護也方便許多
 
