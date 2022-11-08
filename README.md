@@ -12,8 +12,8 @@ Hope You Enjoy :D
 調整了horvered color（這東西在unity是叫什麼來著）<br>
 讓底色在normal狀態下不顯示<br>
 
-*Start*的名字為*Face it（面對）*<br>
-*Exit*的名字為*Escape（逃避）*<br>
+  *Start*的名字為*Face it（面對）*<br>
+  *Exit*的名字為*Escape（逃避）*<br>
 
 2. Title<br>
 標題名字為*"Kidnapping."*<br>
@@ -21,7 +21,7 @@ Hope You Enjoy :D
 事實上這是一個關於綁架與濫捕野生動物的故事<br>
 第一關主角進入迷霧之森，第二關遇見*「寵物」*，第三關打倒和*「寵物」*相像的*「魔王」*<br>
 
-咦？
+  咦？
 
 3. Settings<br>
 偷用了基礎程設課學的Fungus來把牆打破_（鏘啷——）_<br>
