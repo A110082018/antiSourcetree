@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
         // 往前飛
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * speed;
+
+        Destroy(gameObject, 3.0f);
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // 如果碰撞到的是子彈
+        // 如果碰撞到的是敵人
         if (other.tag == "Enemy")
         {
             // 刪除自己
