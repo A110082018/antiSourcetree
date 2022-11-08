@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public GameObject Grenade;
+    public GameObject GrenadeObj;
     public const float g =100f;
 
     private float time;
