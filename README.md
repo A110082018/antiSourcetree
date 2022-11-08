@@ -23,7 +23,7 @@ Hope You Enjoy :D
 
 咦？
 
-３. Settings<br>
+3. Settings<br>
 偷用了基礎程設課學的Fungus來把牆打破_（鏘啷——）_<br>
 一進去就有對話告知你我們不接受調整設定<br>
 ~（雖然其實是因為我們還沒做這個功能）~
