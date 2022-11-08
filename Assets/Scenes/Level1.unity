@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.35124174, g: 0.35154626, b: 0.31906423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,14 +311,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.32278162, y: 0.72814405, z: 0.25885618, w: 0.54645395}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.387, y: 105.595, z: 48.867}
+--- !u!1 &774671835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6890982093996994014, guid: 9e2fc4172778247bdbc295bf4e68ef79, type: 3}
+  m_PrefabInstance: {fileID: 6890982092515830291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &774671840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774671835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0411b8ff0901d4196cae3c41e48948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  joyStick: {fileID: 1610471561}
+  firePoint: {fileID: 1681466042}
+  bulletPrefab: {fileID: 6133920634788951114, guid: 774762f889eb049f6bd6d10fdb62a1fb, type: 3}
 --- !u!1001 &844524890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -453,7 +474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24504551, y: -1.0332699e-15, z: 2.2876431e-17, w: 0.96951157}
+  m_LocalRotation: {x: 0.24504551, y: -0.000000011968166, z: 0.0000000030249714, w: 0.9695116}
   m_LocalPosition: {x: 0, y: 6.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -715,7 +736,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102850626}
-  m_LocalRotation: {x: 0.24504551, y: -1.0332699e-15, z: 2.2876431e-17, w: 0.96951157}
+  m_LocalRotation: {x: 0.24504551, y: -0.000000011968166, z: 0.0000000030249714, w: 0.9695116}
   m_LocalPosition: {x: 0, y: 6.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1008,6 +1029,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1681466042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6890982094051819734, guid: 9e2fc4172778247bdbc295bf4e68ef79, type: 3}
+  m_PrefabInstance: {fileID: 6890982092515830291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6890982092515830291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1019,6 +1045,10 @@ PrefabInstance:
       propertyPath: joyStick
       value: 
       objectReference: {fileID: 1610471561}
+    - target: {fileID: 6890982093996993984, guid: 9e2fc4172778247bdbc295bf4e68ef79, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6890982093996993985, guid: 9e2fc4172778247bdbc295bf4e68ef79, type: 3}
       propertyPath: m_RootOrder
       value: 3
