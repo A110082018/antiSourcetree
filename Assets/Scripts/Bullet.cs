@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour
             // 刪除自己
             gameObject.SetActive(false);
             Destroy(gameObject);
+            Debug.Log("lofi!");
         }
     }
 }
