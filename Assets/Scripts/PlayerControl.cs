@@ -13,7 +13,6 @@ public class PlayerControl : MonoBehaviour
     //fire
     public Transform firePoint;
     public GameObject bulletPrefab;
-
     private bool isKeepShooting = false;
 
 
@@ -110,11 +109,6 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    public void Fire()
-    {
-        Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
-    }
-
     IEnumerator KeepShooting()
     {
         while(true)
@@ -128,5 +122,10 @@ public class PlayerControl : MonoBehaviour
         Debug.Log("0.5f");
         }
     
+    }
+    
+    public void Fire()
+    {
+        Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
 }

@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GrenadeObj: {fileID: 6374046335329199094}
-  speed: 15000
-  radius: 5000
-  power: 10000
+  speed: 3000
+  radius: 20
+  power: 300
   colliders: []
   explosionPos: {x: 0, y: 0, z: 0}
 --- !u!54 &7217055551785923478
