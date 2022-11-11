@@ -32,8 +32,9 @@ public class inGameUI : MonoBehaviour
                 Pet.isKeepShooting = 0;
             }
     }
-    public void Button_Character()
+    public void Button_CharacterShot()
     {
-
+        Debug.Log("Shoot!");
+        
     }
 }

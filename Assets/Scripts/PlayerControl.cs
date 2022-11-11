@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        StartCoroutine(KeepShooting());
+        //StartCoroutine(KeepShooting());
     }
 
     // Update is called once per frame
@@ -28,7 +28,8 @@ public class PlayerControl : MonoBehaviour
     {
         PlayerMove();
         FindEnemy();
-        FireControll();
+        
+        //FireControll();
 /*
         if (isKeepShooting == true)
         {
