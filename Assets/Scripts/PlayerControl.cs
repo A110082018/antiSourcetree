@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     //move
-    public float speed = 10;
+    public float speed = 1000;
     public Joystick joyStick;
     private CharacterController controller;
     private GameObject focusEnemy;
