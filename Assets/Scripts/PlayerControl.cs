@@ -15,11 +15,15 @@ public class PlayerControl : MonoBehaviour
     public GameObject bulletPrefab;
     private bool isKeepShooting = false;
 
+    //animation
+    private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         //StartCoroutine(KeepShooting());
     }
 
@@ -58,11 +62,14 @@ public class PlayerControl : MonoBehaviour
 
         // 移動角色位置
         controller.Move(dir * speed * Time.deltaTime);
+        
+        //播放移動動畫
+        animator.SetTrigger("Run");
 
         // 地心引力 (y)
         if (!controller.isGrounded)
         {
-            dir.y = -9.8f * 30 * Time.deltaTime;
+            dir.y = -98f * 1000 * Time.deltaTime;
         }
 
     }
@@ -128,5 +135,6 @@ public class PlayerControl : MonoBehaviour
     public void Fire()
     {
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
+        animator.SetTrigger("Attack");
     }
 }
