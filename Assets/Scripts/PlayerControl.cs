@@ -18,12 +18,11 @@ public class PlayerControl : MonoBehaviour
     //animation
     private Animator animator;
 
-
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); 
         //StartCoroutine(KeepShooting());
     }
 
@@ -62,8 +61,6 @@ public class PlayerControl : MonoBehaviour
 
         // 移動角色位置
         controller.Move(dir * speed * Time.deltaTime);
-        
-        //播放移動動畫
         animator.SetTrigger("Run");
 
         // 地心引力 (y)
