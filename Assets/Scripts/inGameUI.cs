@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class inGameUI : MonoBehaviour
 {
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,7 @@ public class inGameUI : MonoBehaviour
     public void Button_CharacterShot()
     {
         Debug.Log("Shoot!");
+        Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
         
     }
 }
