@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class L1Enemy : MonoBehaviour
 {
+    // HP
     private float L1EnemyHP = 100f;
 
+    //find player
     private GameObject focusPlayer;
     public float FindPlayerminiDist = 9999;
 
+    //move
+    public float speed = 50000.0f; 
+    private Rigidbody rb; 
+    public GameObject petObject;
+    public List<Vector3> positionList;
+    public int distance = 50;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         FindPlayer();
+        move();
     }
 
     public void FindPlayer()
@@ -42,6 +52,22 @@ public class L1Enemy : MonoBehaviour
         }
     }
 
+    void move()
+    {
+        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        Vector3 push = new Vector3(h, 0, v) * speed;
+        rb.AddForce(push * Time.deltaTime);
+
+        positionList.Add(transform.position);       //紀錄玩家每偵位置
+        if (positionList.Count > distance)          //集合的數字超過一定數字後意旨玩家與寵物的距離過遠時 就讓寵物照著玩家軌跡走，並清除先前紀錄的位置
+        {
+            positionList.RemoveAt(0);               
+            petObject.transform.position = positionList[0];
+        }
+        
+    }
+
     // be hit by bullet
     private void OnTriggerEnter(Collider other)
     {
@@ -55,6 +81,13 @@ public class L1Enemy : MonoBehaviour
                 gameObject.SetActive(false);
                 Destroy(gameObject);
             }
+        }
+
+        // collision by "Player"
+        if (other.tag == "Player")
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

@@ -87,6 +87,18 @@ public class inGameUI : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 5)
+            {
+                SceneManager.LoadScene(6);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
     }
     void PauseGame()
     {

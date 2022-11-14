@@ -12,10 +12,18 @@ public class Pet : MonoBehaviour
     public GameObject bulletPrefab;
     public static float isKeepShooting = 0;
 
+    //pet follow
+    public float speed = 500.0f; 
+    private Rigidbody rb; 
+    public GameObject petObject;            //要跟隨的物件
+    public List<Vector3> positionList;
+    public int distance = 50;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(KeepShooting());
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,6 +31,7 @@ public class Pet : MonoBehaviour
     {
         CheckPet();
         FireControll();
+        move();
     }
 
     //check Pet admission
@@ -74,4 +83,21 @@ public class Pet : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
+
+    void move()
+    {
+        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        Vector3 push = new Vector3(h, 0, v) * speed;
+        rb.AddForce(push * Time.deltaTime);
+
+        positionList.Add(transform.position);       //紀錄玩家每偵位置
+        if (positionList.Count > distance)          //集合的數字超過一定數字後意旨玩家與寵物的距離過遠時 就讓寵物照著玩家軌跡走，並清除先前紀錄的位置
+        {
+            positionList.RemoveAt(0);               
+            petObject.transform.position = positionList[0];
+        }
+        
+    }
+
 }
