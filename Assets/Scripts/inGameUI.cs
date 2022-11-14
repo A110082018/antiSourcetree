@@ -9,15 +9,19 @@ public class inGameUI : MonoBehaviour
     // pet shoot
     public Transform firePoint;
     public GameObject bulletPrefab;
+    
 
     // pause
     public Button PauseButton;
     public GameObject PauseWindow;
     private bool isPause;
+    public Text PauseTitle;
 
+    // pause
     public void Button_Menu()
     {
-
+        PauseGame();
+        
     }
     public void Button_Pet()
     {
@@ -39,11 +43,27 @@ public class inGameUI : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
 
+    public void BacktoGame()
+    {
+        PauseWindow.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        isPause = !isPause;
+    }
+
+    public void BacktoTitle()
+    {
+        isPause = !isPause;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         isPause = false;
         PauseButton.onClick.AddListener(PauseGame);
+        
+
     }
 
     // Update is called once per frame
@@ -73,16 +93,28 @@ public class inGameUI : MonoBehaviour
     void PauseGame()
     {
         isPause = !isPause;
+        Debug.Log("1");
+        
 
+        
         if (isPause == true)
         {
             PauseWindow.gameObject.SetActive(true);
             Time.timeScale = 0;
+            InvokeRepeating("showHide", 0.5f, 0.5f);
+            Debug.Log("2");
+        }
+    }
+    void showHide()
+    {
+        
+        if(PauseTitle.text == "Want to ESCAPE ?")
+        {
+            PauseTitle.text = " ";
         }
         else
         {
-            PauseWindow.gameObject.SetActive(false);
-            Time.timeScale = 1;
+            PauseTitle.text = "Want to ESCAPE ?";
         }
     }
     
