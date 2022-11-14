@@ -8,6 +8,8 @@ public class PlayerControl : MonoBehaviour
     public float speed = 1000;
     public Joystick joyStick;
     private CharacterController controller;
+
+    //focus enemy
     private GameObject focusEnemy;
 
     //fire
