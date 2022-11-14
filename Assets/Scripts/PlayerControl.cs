@@ -32,13 +32,13 @@ public class PlayerControl : MonoBehaviour
         PlayerMove();
         FindEnemy();
         
-        //FireControll();
-/*
+        FireControll();
+
         if (isKeepShooting == true)
         {
             StartCoroutine(KeepShooting());
         }
-*/
+
     }
     public void PlayerMove()
     {
@@ -116,15 +116,19 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator KeepShooting()
     {
-        while(true)
-        {
         if (isKeepShooting == true)
         {
-            Fire();
-            Debug.Log("Fire");
+        while(true)
+        {
+            if (isKeepShooting == true)
+            {
+                Fire();
+                Debug.Log("Fire");
+            }
+            yield return new WaitForSeconds(1f);
+            Debug.Log("0.5f");
+        
         }
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("0.5f");
         }
     
     }

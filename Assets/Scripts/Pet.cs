@@ -60,13 +60,13 @@ public class Pet : MonoBehaviour
     {
         while(true)
         {
-        if (isKeepShooting == 1)
-        {
-            Fire();
-            Debug.Log("Fire");
-        }
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("0.5f");
+            if (isKeepShooting == 1)
+            {
+                Fire();
+                Debug.Log("Fire");
+            }
+            yield return new WaitForSeconds(0.5f);
+            Debug.Log("0.5f");
         }
     }
     
