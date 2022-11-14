@@ -5,18 +5,18 @@ using UnityEngine;
 public class Grenade : MonoBehaviour
 {
     public GameObject GrenadeObj;
-    public const float g =100f;
+    public const float g =1500f;
 
     private float time;
-    public float speed = 50;
+    public float speed = 1500;
 
     private float verticalSpeed;
-    public float radius = 5.0F;
-    public float power = 100.0F; 
+    public float radius = 600F;
+    public float power = 6000F; 
 
     public Collider[] colliders;
     public Vector3 explosionPos;
-    bool isHit = false;
+    //private Animator animator;
     
     void Start()
     {
@@ -24,6 +24,7 @@ public class Grenade : MonoBehaviour
         float riseTime, downTime;
         riseTime = downTime = tempTime ;
         verticalSpeed = g * riseTime;
+    //    animator = GetComponent<Animator>();
     }
 
     
@@ -31,23 +32,15 @@ public class Grenade : MonoBehaviour
     {
         time += Time.deltaTime;
         float test = verticalSpeed - g*time;
-        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+        transform.Translate(transform.forward * speed * Time.deltaTime);
         transform.Translate(transform.up * test * Time.deltaTime, Space.World); 
-        if(isHit)
-        {
-            Invoke("Explosion",0);  
-        }
+        Invoke("Explosion", 1.75F);  
     }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.name == "floor")
-        {   
-           isHit = true;
-        }
-        
-    }
+
     void Explosion()
     {
+        Debug.Log("H");
+    //    animator.SetTrigger("Fire");
         Vector3 explosionPos = this.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
@@ -58,7 +51,7 @@ public class Grenade : MonoBehaviour
                 rb.AddExplosionForce(power, explosionPos, radius);  //施加爆破力道
             }
             gameObject.GetComponent<Renderer>().enabled =false;
-            Destroy(this.gameObject,1);
+            Destroy(this.gameObject,0.5F);
         }    
     }  
 }
