@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// example
 public class Enemy : MonoBehaviour
 {
+    
     private float hp = 100f;
 
     void Start()
