@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class inGameUI : MonoBehaviour
 {
+    // pet shoot
     public Transform firePoint;
     public GameObject bulletPrefab;
+
+    // pause
+    public Button PauseButton;
+    public GameObject PauseWindow;
+    private bool isPause;
 
     public void Button_Menu()
     {
@@ -35,7 +42,8 @@ public class inGameUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isPause = false;
+        PauseButton.onClick.AddListener(PauseGame);
     }
 
     // Update is called once per frame
@@ -44,6 +52,7 @@ public class inGameUI : MonoBehaviour
         NextLevel();   
     }
 
+    // if no more enemy then next level
     public void NextLevel()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
@@ -59,6 +68,21 @@ public class inGameUI : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+        }
+    }
+    void PauseGame()
+    {
+        isPause = !isPause;
+
+        if (isPause == true)
+        {
+            PauseWindow.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            PauseWindow.gameObject.SetActive(false);
+            Time.timeScale = 1;
         }
     }
     
