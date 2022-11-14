@@ -5,27 +5,25 @@ using UnityEngine;
 public class Grenade : MonoBehaviour
 {
     public GameObject GrenadeObj;
-    public const float g =4000f;
+    public const float g =100f;
 
     private float time;
-    public float speed = 3000;
+    public float speed = 50;
 
     private float verticalSpeed;
-    public float radius = 600F;
-    public float power = 6000F; 
+    public float radius = 5.0F;
+    public float power = 100.0F; 
 
     public Collider[] colliders;
     public Vector3 explosionPos;
+    bool isHit = false;
     
-    private Animator animator;
-
     void Start()
     {
         float tempTime = 1;
         float riseTime, downTime;
         riseTime = downTime = tempTime ;
         verticalSpeed = g * riseTime;
-        animator = GetComponent<Animator>();
     }
 
     
@@ -35,14 +33,21 @@ public class Grenade : MonoBehaviour
         float test = verticalSpeed - g*time;
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
         transform.Translate(transform.up * test * Time.deltaTime, Space.World); 
-        Invoke("Explosion", 0F);
+        if(isHit)
+        {
+            Invoke("Explosion",0);  
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "floor")
+        {   
+           isHit = true;
+        }
         
     }
     void Explosion()
     {
-        Debug.Log("FIRE!!!");
-        animator.SetTrigger("Fire");  
-        /*animator.SetTrigger("Fire");
         Vector3 explosionPos = this.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
@@ -54,6 +59,6 @@ public class Grenade : MonoBehaviour
             }
             gameObject.GetComponent<Renderer>().enabled =false;
             Destroy(this.gameObject,1);
-        } */   
+        }    
     }  
 }

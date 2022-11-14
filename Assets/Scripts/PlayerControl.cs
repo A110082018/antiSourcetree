@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         //StartCoroutine(KeepShooting());
     }
 
