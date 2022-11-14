@@ -358,6 +358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8154918941280977275, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8820237466772970433, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1084,6 +1088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8154918941280977275, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8820237466772970433, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1233,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8905788140538117035, guid: 1bdab31ef1f1ffa4692ba738134caa6c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8905788140538117035, guid: 1bdab31ef1f1ffa4692ba738134caa6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1281,6 +1289,11 @@ PrefabInstance:
       objectReference: {fileID: 864971862}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdab31ef1f1ffa4692ba738134caa6c, type: 3}
+--- !u!4 &554390832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8905788141477623351, guid: 1bdab31ef1f1ffa4692ba738134caa6c, type: 3}
+  m_PrefabInstance: {fileID: 554390831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613093323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 568cbdf81bdcc614ab77ad5c28934ab4, type: 3}
@@ -1705,8 +1718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f785d259b4fece74a82a897270edba46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 554390832}
+  bulletPrefab: {fileID: 6374046335329199094, guid: 165f96c4db78e20469c17c51c0642e3d, type: 3}
   PauseButton: {fileID: 90236935}
   PauseWindow: {fileID: 339563802}
   PauseTitle: {fileID: 1207589554}
@@ -3540,6 +3553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8154918941280977275, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8820237466772970433, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3695,9 +3712,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8154918941280977275, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8820237466772970433, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8820237466772970433, guid: d4e39cd29dd111e4399003f845b182c7, type: 3}
       propertyPath: m_LocalPosition.x
