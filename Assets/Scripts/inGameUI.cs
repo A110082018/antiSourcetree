@@ -62,8 +62,6 @@ public class inGameUI : MonoBehaviour
     {
         isPause = false;
         PauseButton.onClick.AddListener(PauseGame);
-        
-
     }
 
     // Update is called once per frame
@@ -82,7 +80,7 @@ public class inGameUI : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 5)
             {
-                return;
+                SceneManager.LoadScene(6);
             }
             else
             {

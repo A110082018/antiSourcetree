@@ -87,7 +87,7 @@ public class MainMenu : MonoBehaviour
     //Button Start
     public void ButtonStart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     //Button Settings
     public void ButtonSettings()
