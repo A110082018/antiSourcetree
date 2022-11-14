@@ -263,6 +263,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &120320282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8905788141477623351, guid: 1bdab31ef1f1ffa4692ba738134caa6c, type: 3}
+  m_PrefabInstance: {fileID: 287270501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148084617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5252682845850649624, guid: e8b5066d78a98aa4990fb430f324b1f9, type: 3}
@@ -1092,7 +1097,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762656122}
-  m_LocalRotation: {x: 0.32533386, y: 0.000000021678456, z: -0.000000007458481, w: 0.94559926}
+  m_LocalRotation: {x: 0.32533386, y: 0.00000006769793, z: -0.000000023291504, w: 0.94559926}
   m_LocalPosition: {x: 1610.6769, y: 2039.0132, z: -3407.1018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1464,8 +1469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f785d259b4fece74a82a897270edba46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 120320282}
+  bulletPrefab: {fileID: 6374046335329199094, guid: 165f96c4db78e20469c17c51c0642e3d, type: 3}
   PauseButton: {fileID: 1133067247}
   PauseWindow: {fileID: 59331194}
   PauseTitle: {fileID: 487488999}
@@ -1552,7 +1557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 969044181}
         m_TargetAssemblyTypeName: inGameUI, Assembly-CSharp
         m_MethodName: Button_CharacterShot
         m_Mode: 1
@@ -2243,7 +2248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 969044181}
         m_TargetAssemblyTypeName: inGameUI, Assembly-CSharp
         m_MethodName: Button_Menu
         m_Mode: 1
@@ -3625,7 +3630,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906949539}
-  m_LocalRotation: {x: 0.32533386, y: 0.000000021678456, z: -0.000000007458481, w: 0.94559926}
+  m_LocalRotation: {x: 0.32533386, y: 0.00000006769793, z: -0.000000023291504, w: 0.94559926}
   m_LocalPosition: {x: 1610.6769, y: 2039.0132, z: -3407.1018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
