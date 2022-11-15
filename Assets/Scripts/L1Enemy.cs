@@ -17,10 +17,12 @@ public class L1Enemy : MonoBehaviour
     public GameObject petObject;
     public List<Vector3> positionList;
     public int distance = 50;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -77,7 +79,9 @@ public class L1Enemy : MonoBehaviour
             Debug.Log("collider");
             Bullet bullet = other.GetComponent<Bullet>();
             gameObject.SetActive(false);
-            Destroy(gameObject);
+            
+            animator.SetTrigger("Die");
+            Destroy(gameObject, 5);
 
             inGameUI.guilty = inGameUI.guilty + 20;
 

@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2542270138366358283}
   - component: {fileID: 2542270138366358280}
   - component: {fileID: 2542270138366358281}
-  - component: {fileID: -8708048158492103985}
+  - component: {fileID: 2695773313011315574}
   m_Layer: 0
   m_Name: PET_test
   m_TagString: Enemy
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24812e0dc4208e44b0e42ca002bbe83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &-8708048158492103985
+--- !u!95 &2695773313011315574
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0

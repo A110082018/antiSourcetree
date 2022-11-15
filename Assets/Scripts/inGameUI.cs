@@ -21,9 +21,10 @@ public class inGameUI : MonoBehaviour
     public GameObject PauseWindow;
     private bool isPause;
     public Text PauseTitle;
+
     public Animator animator;
     public AudioSource m_audioSource;
-    public AudioClip m_hittedSound;
+    public AudioClip attackSound;
 
     // pause
     public void Button_Menu()
@@ -34,13 +35,14 @@ public class inGameUI : MonoBehaviour
     }
     public void Button_Pet()
     {
+        m_audioSource.PlayOneShot(attackSound);
+        animator.SetTrigger("Attack");
         Instantiate(ArrowPrefab, firePoint.transform.position, transform.rotation);
     }
     // player shoot
     public void Button_CharacterShot()
     {
-        //Debug.Log("Shoot!");
-        m_audioSource.PlayOneShot(m_hittedSound);
+        m_audioSource.PlayOneShot(attackSound);
         animator.SetTrigger("Attack");
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
@@ -82,9 +84,21 @@ public class inGameUI : MonoBehaviour
         Debug.Log(enemyCount);
         if (enemyCount == 0)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 5)
+            if (SceneManager.GetActiveScene().buildIndex == 4)
             {
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(5);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                SceneManager.LoadScene(5);
             }
             else
             {
