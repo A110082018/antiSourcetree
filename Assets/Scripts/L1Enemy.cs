@@ -74,13 +74,20 @@ public class L1Enemy : MonoBehaviour
         // collision by "Bullet"
         if (other.tag == "Bullet")
         {
+            Debug.Log("collider");
             Bullet bullet = other.GetComponent<Bullet>();
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+
+            /*
             L1EnemyHP -= bullet.atk;
+            Debug.Log(L1EnemyHP);
             if (L1EnemyHP <= 0)
             {
+                Debug.Log("dieee");
                 gameObject.SetActive(false);
                 Destroy(gameObject);
-            }
+            }*/
         }
 
         // collision by "Player"

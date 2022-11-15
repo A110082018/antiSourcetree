@@ -1213,6 +1213,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
   m_PrefabInstance: {fileID: 1025004237}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &360694476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2048149997915701000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+  m_PrefabInstance: {fileID: 1201638957640063325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &380918425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8380157826906577798, guid: 568cbdf81bdcc614ab77ad5c28934ab4, type: 3}
@@ -1469,9 +1474,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3279019930898279001, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1517,6 +1526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_test (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3908190169647376379, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: petObject
+      value: 
+      objectReference: {fileID: 1036201726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
 --- !u!1 &719949570 stripped
@@ -1788,6 +1801,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.866777, y: 9.802496, z: 0.6233127}
   m_Center: {x: 0.53890765, y: 0.5315829, z: -0.04678098}
+--- !u!1 &914194014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2048149997915701000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+  m_PrefabInstance: {fileID: 1245412075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916777779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1558721567721526513, guid: 568cbdf81bdcc614ab77ad5c28934ab4, type: 3}
@@ -2004,7 +2022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &969044181
 MonoBehaviour:
@@ -2368,6 +2386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+--- !u!1 &1036201726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2048149997915701000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+  m_PrefabInstance: {fileID: 717359855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085401233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: 568cbdf81bdcc614ab77ad5c28934ab4, type: 3}
@@ -2494,7 +2517,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 32.547, y: -23.219, z: 44.936}
 --- !u!1 &1128060905
 GameObject:
@@ -3193,9 +3216,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3279019930898279001, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3241,6 +3268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_test (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3908190169647376379, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: petObject
+      value: 
+      objectReference: {fileID: 1267451652}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
 --- !u!1001 &1245412075
@@ -3250,9 +3281,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3279019930898279001, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3298,6 +3333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_test (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3908190169647376379, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: petObject
+      value: 
+      objectReference: {fileID: 914194014}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
 --- !u!1 &1263641515 stripped
@@ -3334,6 +3373,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1267451652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2048149997915701000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+  m_PrefabInstance: {fileID: 1226024681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305009082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5245042011116262203, guid: 568cbdf81bdcc614ab77ad5c28934ab4, type: 3}
@@ -4418,6 +4462,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3279019930898279001, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256658518286011661, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1668492672165946802, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4466,5 +4518,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_test
       objectReference: {fileID: 0}
+    - target: {fileID: 3908190169647376379, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
+      propertyPath: petObject
+      value: 
+      objectReference: {fileID: 360694476}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1067686c0a8d2e94fb41460f29adadd9, type: 3}
