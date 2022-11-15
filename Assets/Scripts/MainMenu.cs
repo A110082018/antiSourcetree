@@ -88,6 +88,7 @@ public class MainMenu : MonoBehaviour
     public void ButtonStart()
     {
         SceneManager.LoadScene(3);
+        inGameUI.guilty = 0;
     }
     //Button Settings
     public void ButtonSettings()
