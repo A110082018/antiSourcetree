@@ -78,9 +78,9 @@ public class inGameUI : MonoBehaviour
         Debug.Log(enemyCount);
         if (enemyCount == 0)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 5)
+            if (SceneManager.GetActiveScene().buildIndex == 4)
             {
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(5);
             }
             else
             {
@@ -90,9 +90,9 @@ public class inGameUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            if (SceneManager.GetActiveScene().buildIndex == 5)
+            if (SceneManager.GetActiveScene().buildIndex == 4)
             {
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(5);
             }
             else
             {
