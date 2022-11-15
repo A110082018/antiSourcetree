@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1256658518286011661}
   - component: {fileID: -3279019930898279001}
   - component: {fileID: 3908190169647376379}
+  - component: {fileID: 8635603636694529426}
   m_Layer: 0
   m_Name: Boss_test
   m_TagString: Enemy
@@ -171,6 +172,26 @@ MonoBehaviour:
   petObject: {fileID: 0}
   positionList: []
   distance: 50
+--- !u!95 &8635603636694529426
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048149997915701000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1138ab8f559bd3342997a258a55aa162, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2455657905689283673
 GameObject:
   m_ObjectHideFlags: 0

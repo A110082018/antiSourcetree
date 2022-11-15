@@ -22,6 +22,10 @@ public class inGameUI : MonoBehaviour
     private bool isPause;
     public Text PauseTitle;
 
+    public Animator animator;
+    public AudioSource m_audioSource;
+    public AudioClip attackSound;
+
     // pause
     public void Button_Menu()
     {
@@ -31,11 +35,15 @@ public class inGameUI : MonoBehaviour
     }
     public void Button_Pet()
     {
+        m_audioSource.PlayOneShot(attackSound);
+        animator.SetTrigger("Attack");
         Instantiate(ArrowPrefab, firePoint.transform.position, transform.rotation);
     }
     // player shoot
     public void Button_CharacterShot()
     {
+        m_audioSource.PlayOneShot(attackSound);
+        animator.SetTrigger("Attack");
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
 
