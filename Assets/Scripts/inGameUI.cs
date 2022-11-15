@@ -9,6 +9,11 @@ public class inGameUI : MonoBehaviour
     // pet shoot
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject ArrowPrefab;
+
+    // score
+    public static int guilty = 0;
+    public Text textGuilty;
     
 
     // pause
@@ -20,26 +25,17 @@ public class inGameUI : MonoBehaviour
     // pause
     public void Button_Menu()
     {
+        Debug.Log("Menu");
         PauseGame();
         
     }
     public void Button_Pet()
     {
-        if(Pet.isKeepShooting == 0)
-            {
-                Debug.Log("f>t");
-                Pet.isKeepShooting = 1;
-            }
-            else if(Pet.isKeepShooting == 1)
-            {
-                Debug.Log("t>f");
-                Pet.isKeepShooting = 0;
-            }
+        Instantiate(ArrowPrefab, firePoint.transform.position, transform.rotation);
     }
     // player shoot
     public void Button_CharacterShot()
     {
-        Debug.Log("Shoot!");
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
 
@@ -67,7 +63,9 @@ public class inGameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NextLevel();   
+        NextLevel();
+        textGuilty.text = "GUILTY  " + guilty;
+        InvokeRepeating("showHide", 0.5f, 0.5f);
     }
 
     // if no more enemy then next level
@@ -103,21 +101,16 @@ public class inGameUI : MonoBehaviour
     void PauseGame()
     {
         isPause = !isPause;
-        Debug.Log("1");
-        
-
         
         if (isPause == true)
         {
             PauseWindow.gameObject.SetActive(true);
             Time.timeScale = 0;
-            InvokeRepeating("showHide", 0.5f, 0.5f);
-            Debug.Log("2");
+            //InvokeRepeating("showHide", 0.5f, 0.5f);
         }
     }
     void showHide()
     {
-        
         if(PauseTitle.text == "Want to ESCAPE ?")
         {
             PauseTitle.text = " ";
@@ -128,4 +121,5 @@ public class inGameUI : MonoBehaviour
         }
     }
     
+    // rescue me.
 }

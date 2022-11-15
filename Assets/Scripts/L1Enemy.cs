@@ -79,6 +79,8 @@ public class L1Enemy : MonoBehaviour
             gameObject.SetActive(false);
             Destroy(gameObject);
 
+            inGameUI.guilty = inGameUI.guilty + 20;
+
             /*
             L1EnemyHP -= bullet.atk;
             Debug.Log(L1EnemyHP);
@@ -97,4 +99,6 @@ public class L1Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // ;(
 }

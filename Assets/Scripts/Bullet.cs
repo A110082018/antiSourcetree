@@ -33,4 +33,6 @@ public class Bullet : MonoBehaviour
             Debug.Log("lofi!");
         }
     }
+
+    // am I a tiger or a gazelle ?
 }
