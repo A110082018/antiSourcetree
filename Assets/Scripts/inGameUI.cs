@@ -39,12 +39,9 @@ public class inGameUI : MonoBehaviour
     // player shoot
     public void Button_CharacterShot()
     {
-<<<<<<< HEAD
         //Debug.Log("Shoot!");
         m_audioSource.PlayOneShot(m_hittedSound);
         animator.SetTrigger("Attack");
-=======
->>>>>>> origin/main
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
     }
 
