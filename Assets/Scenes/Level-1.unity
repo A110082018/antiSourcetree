@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FindPlayerminiDist: 9999
   speed: 500
-  petObject: {fileID: 2123004598}
+  petObject: {fileID: 64565097}
   positionList: []
   distance: 50
 --- !u!54 &64565102
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FindPlayerminiDist: 9999
   speed: 500
-  petObject: {fileID: 2123004598}
+  petObject: {fileID: 195741936}
   positionList: []
   distance: 50
 --- !u!65 &206022337
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FindPlayerminiDist: 9999
   speed: 500
-  petObject: {fileID: 2123004598}
+  petObject: {fileID: 661129381}
   positionList: []
   distance: 50
 --- !u!54 &661129386
@@ -3924,7 +3924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FindPlayerminiDist: 9999
   speed: 500
-  petObject: {fileID: 2123004598}
+  petObject: {fileID: 1575644016}
   positionList: []
   distance: 50
 --- !u!54 &1575644021
@@ -4436,7 +4436,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906949539}
-  m_LocalRotation: {x: 0.28960535, y: -0.000000023290717, z: 0.000000007047111, w: 0.95714617}
+  m_LocalRotation: {x: 0.28960535, y: 0.00000002329071, z: -0.0000000070471087, w: 0.95714617}
   m_LocalPosition: {x: 2030, y: 1785, z: -3727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4512,7 +4512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FindPlayerminiDist: 9999
   speed: 500
-  petObject: {fileID: 2123004598}
+  petObject: {fileID: 1932516866}
   positionList: []
   distance: 50
 --- !u!54 &1932516871
@@ -4609,7 +4609,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973507255}
-  m_LocalRotation: {x: 0.28960535, y: -0.000000023290717, z: 0.000000007047111, w: 0.95714617}
+  m_LocalRotation: {x: 0.28960535, y: 0.00000002329071, z: -0.0000000070471087, w: 0.95714617}
   m_LocalPosition: {x: 2030, y: 1785, z: -3727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

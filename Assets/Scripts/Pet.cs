@@ -11,7 +11,7 @@ public class Pet : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public static float isKeepShooting = 0;
-
+    
     //pet follow
     public float speed = 500.0f; 
     private Rigidbody rb; 
@@ -19,19 +19,25 @@ public class Pet : MonoBehaviour
     public List<Vector3> positionList;
     public int distance = 50;
 
+    //follow 2
+    public GameObject target; // 追蹤的目標（在Unity中拖曳指定）
+    private Vector3 offset; // 與目標的座標差異
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(KeepShooting());
         rb = GetComponent<Rigidbody>();
+        offset = transform.position - target.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckPet();
+        //CheckPet();
         FireControll();
-        move();
+        //move();
+        transform.position = target.transform.position + offset;
     }
 
     //check Pet admission
@@ -72,10 +78,8 @@ public class Pet : MonoBehaviour
             if (isKeepShooting == 1)
             {
                 Fire();
-                Debug.Log("Fire");
             }
             yield return new WaitForSeconds(0.5f);
-            Debug.Log("0.5f");
         }
     }
     
@@ -86,6 +90,7 @@ public class Pet : MonoBehaviour
 
     void move()
     {
+        Debug.Log("move!");
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
         Vector3 push = new Vector3(h, 0, v) * speed;
@@ -95,7 +100,7 @@ public class Pet : MonoBehaviour
         if (positionList.Count > distance)          //集合的數字超過一定數字後意旨玩家與寵物的距離過遠時 就讓寵物照著玩家軌跡走，並清除先前紀錄的位置
         {
             positionList.RemoveAt(0);               
-            petObject.transform.position = positionList[0];
+            //petObject.transform.position = positionList[0];
         }
         
     }
