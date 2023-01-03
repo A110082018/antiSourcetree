@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     //move
-    public float speed = 1000;
+    public float speed = 10;
     public Joystick joyStick;
     private CharacterController controller;
 
@@ -37,10 +37,10 @@ public class PlayerControl : MonoBehaviour
         
         FireControll();
 
-        if (isKeepShooting == true)
-        {
-            StartCoroutine(KeepShooting());
-        }
+        //if (isKeepShooting == true)
+        //{
+        //    StartCoroutine(KeepShooting());
+        //}
 
     }
     public void PlayerMove()
@@ -66,7 +66,7 @@ public class PlayerControl : MonoBehaviour
         controller.Move(dir * speed * Time.deltaTime);
         
         //播放移動動畫
-        animator.SetTrigger("Run");
+        //animator.SetTrigger("Run");
 
         // 地心引力 (y)
         if (!controller.isGrounded)
@@ -81,7 +81,7 @@ public class PlayerControl : MonoBehaviour
         // find target
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 
-        float miniDist = 9999;
+        float miniDist = 99;
         foreach (GameObject enemy in enemys)
         {
             float d = Vector3.Distance(transform.position, enemy.transform.position);
@@ -141,6 +141,6 @@ public class PlayerControl : MonoBehaviour
     public void Fire()
     {
         Instantiate(bulletPrefab, firePoint.transform.position, transform.rotation);
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
     }
 }

@@ -31,6 +31,8 @@ public class Enemy : MonoBehaviour
             
             if (hp <= 0)
             {
+                inGameUI.guilty = inGameUI.guilty + 20;
+                
                 gameObject.SetActive(false);
                 Destroy(gameObject);
             }
